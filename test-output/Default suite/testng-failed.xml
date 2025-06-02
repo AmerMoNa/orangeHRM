@@ -5,9 +5,8 @@
     <classes>
       <class name="orangHrmTest.orangHrmTest.AppTest">
         <methods>
-          <include name="deleteAdmin"/>
           <include name="mySetup"/>
-          <include name="searchAdminRecords"/>
+          <include name="deleteEmployee"/>
         </methods>
       </class> <!-- orangHrmTest.orangHrmTest.AppTest -->
     </classes>

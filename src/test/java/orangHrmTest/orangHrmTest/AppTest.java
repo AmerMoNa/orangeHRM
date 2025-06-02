@@ -1,5 +1,7 @@
 package orangHrmTest.orangHrmTest;
 
+import static org.testng.Assert.assertEquals;
+
 import java.awt.Desktop.Action;
 import java.awt.Frame;
 import java.sql.Date;
@@ -111,8 +113,7 @@ public class AppTest extends testData {
 		editButton.get(randomSelectEmployee).click();
 		Thread.sleep(1000);
 		WebElement editUserName = driver.findElement(By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]"));
-		editUserName.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-		editUserName.sendKeys(Keys.DELETE);
+		editUserName.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		editUserName.sendKeys(randomUserName);
 
 		WebElement saveTheEdit = driver.findElement(
@@ -153,4 +154,128 @@ public class AppTest extends testData {
 		searchButton.click();
 	}
 
+	@Test(priority = 6)
+	public void addEmployee() throws InterruptedException {
+		WebElement PIMbutton = driver.findElement(By.linkText("PIM"));
+		PIMbutton.click();
+
+		WebElement addEmployeeButton = driver.findElement(By.linkText("Add Employee"));
+		addEmployeeButton.click();
+
+		WebElement firstNameField = driver.findElement(By.name("firstName"));
+		firstNameField.sendKeys(firstName);
+
+		WebElement middleNameField = driver.findElement(By.name("middleName"));
+		middleNameField.sendKeys(middleName);
+
+		WebElement lastNameField = driver.findElement(By.name("lastName"));
+		lastNameField.sendKeys(lastName);
+
+		WebElement employeeIdField = driver.findElement(By.cssSelector(".oxd-grid-2.orangehrm-full-width-grid"))
+				.findElement(By.cssSelector(".oxd-input.oxd-input--active"));
+		employeeIdField.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
+		employeeIdField.sendKeys(randomId);
+
+		WebElement saveButton = driver.findElement(
+				By.cssSelector(".oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space"));
+		saveButton.click();
+
+		Thread.sleep(6000);
+		List<WebElement> allFieldPersonalDetails = driver.findElements(By.cssSelector(".oxd-input.oxd-input--active"));
+		WebElement otherId = allFieldPersonalDetails.get(5);
+		otherId.sendKeys(randomId2);
+
+		WebElement driverLicenseNumber = allFieldPersonalDetails.get(6);
+		driverLicenseNumber.sendKeys(randomId + randomId2);
+
+		WebElement licenseExpiryDate = allFieldPersonalDetails.get(7);
+		licenseExpiryDate.sendKeys(nextYear);
+
+		List<WebElement> selectsField = driver.findElements(By.cssSelector(".oxd-select-text-input"));
+
+		WebElement nationality = selectsField.get(0);
+		nationality.sendKeys(countries[randomCountries] + Keys.chord(Keys.ARROW_DOWN, Keys.ENTER));
+
+		WebElement maritalStatus = selectsField.get(1);
+		maritalStatus.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER));
+
+		WebElement dateOfBirth = allFieldPersonalDetails.get(8);
+		dateOfBirth.sendKeys(dayOfBirth);
+
+		List<WebElement> gender = driver
+				.findElements(By.cssSelector(".oxd-radio-input.oxd-radio-input--active.--label-right.oxd-radio-input"));
+		int randomGender = rand.nextInt(gender.size());
+		gender.get(randomGender).click();
+
+		WebElement saveButton2 = driver.findElement(
+				By.cssSelector(".oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space"));
+		saveButton2.click();
+
+	}
+
+	@Test(priority = 7)
+	public void editEmployee() throws InterruptedException {
+
+		WebElement employeeList = driver.findElement(By.cssSelector(".oxd-topbar-body-nav-tab.--visited"));
+		employeeList.click();
+
+		List<WebElement> allButton = driver
+				.findElements(By.cssSelector(".oxd-icon-button.oxd-table-cell-action-space"));
+		List<WebElement> editButton = new ArrayList<>();
+		for (int i = 0; i < allButton.size(); i = i + 2) {
+
+			editButton.add(allButton.get(i));
+		}
+
+		int randomEditButton = rand.nextInt(editButton.size());
+		editButton.get(randomEditButton).click();
+
+		Thread.sleep(2000);
+		WebElement employeeId = driver.findElement(By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]"));
+
+		employeeId.sendKeys(Keys.CONTROL, "a", Keys.DELETE);
+		employeeId.sendKeys(randomId);
+
+		WebElement saveButton = driver.findElement(
+				By.cssSelector(".oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space"));
+		saveButton.click();
+
+	}
+
+	@Test(priority = 8)
+	public void deleteEmployee() {
+
+		WebElement employeeList = driver.findElement(By.cssSelector(".oxd-topbar-body-nav-tab.--visited"));
+		employeeList.click();
+
+		List<WebElement> allButton = driver
+				.findElements(By.cssSelector(".oxd-icon-button.oxd-table-cell-action-space"));
+		List<WebElement> deleteButton = new ArrayList<>();
+		for (int i = 1; i < allButton.size(); i = i + 2) {
+
+			deleteButton.add(allButton.get(i));
+		}
+
+		int randomEditButton = rand.nextInt(deleteButton.size());
+		deleteButton.get(randomEditButton).click();
+
+		WebElement confirmDelete = driver.findElement(
+				By.cssSelector(".oxd-button.oxd-button--medium.oxd-button--label-danger.orangehrm-button-margin"));
+		confirmDelete.click();
+
+	}
+
+	@Test(priority = 9)
+	public void employeeSearch() throws InterruptedException {
+
+		WebElement employeeName = driver.findElement(By.xpath("(//input[@placeholder='Type for hints...'])[1]"));
+		employeeName.sendKeys(employeeSugg[randomSelect]);
+		Thread.sleep(1500);
+		employeeName.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER));
+
+		WebElement searchButton = driver.findElement(
+				By.cssSelector(".oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space"));
+		searchButton.click();
+
+	}
 }
