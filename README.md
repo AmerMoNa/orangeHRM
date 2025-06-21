@@ -104,14 +104,6 @@ Structured naming conventions and readability
 
 
 
-📌 Future Enhancements
-
-Integration with CI/CD tools (e.g., GitHub Actions, Jenkins)
-
-Page Object Model (POM) refactor
-
-Advanced reporting with Allure or ExtentReports
-
 
 
 👤 Author
