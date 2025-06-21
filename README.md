@@ -21,26 +21,34 @@ This project provides a comprehensive suite of automated end-to-end tests for th
 ✅ Login validation for ESS users
 
 
+
+
 🛠️ Technology Stack
 
-Technology              Description
+Technology                     Description
 ------------------------------------------------------------------------------
-Java                    Programming language for test implementation
+Java                           Programming language for test implementation
 
-Selenium WebDriver      UI automation framework
+Selenium WebDriver              UI automation framework
 
-TestNG                  Testing framework for organizing and executing tests
+TestNG                         Testing framework for organizing and executing tests
 
-ChromeDriver            WebDriver for Google Chrome
+ChromeDriver                   WebDriver for Google Chrome
 
-Maven                   Build tool for dependency management
+Maven                         Build tool for dependency management
+
 
 📁 Project Structure
 
 orangHrmTest/
+
 ├── AppTest.java       # Core test suite with all automated test cases
+
 ├── testData.java      # Dynamic test data generation and WebDriver setup
+
 ├── README.md          # Project documentation
+
+
 
 ⚙️ Setup Instructions
 
@@ -53,6 +61,7 @@ Google Chrome installed
 -ChromeDriver added to system PATH
 
 -IDE (e.g., IntelliJ IDEA, Eclipse)
+
 
 
 Installation & Execution
@@ -70,6 +79,7 @@ Installation & Execution
 💡 The test suite uses randomized usernames and IDs to prevent data collisions and simulate real-world usage.
 
 
+
 🧩 Test Data Management
 
 The testData.java class handles:
@@ -79,6 +89,7 @@ The testData.java class handles:
 -Randomized ID and name generation
 
 -WebDriver initialization and configuration
+
 
 
 ✅ Best Practices Applied
@@ -92,6 +103,7 @@ Assertions for validation
 Structured naming conventions and readability
 
 
+
 📌 Future Enhancements
 
 Integration with CI/CD tools (e.g., GitHub Actions, Jenkins)
@@ -99,6 +111,7 @@ Integration with CI/CD tools (e.g., GitHub Actions, Jenkins)
 Page Object Model (POM) refactor
 
 Advanced reporting with Allure or ExtentReports
+
 
 
 👤 Author
