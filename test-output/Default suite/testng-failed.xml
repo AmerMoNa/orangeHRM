@@ -5,20 +5,11 @@
     <classes>
       <class name="orangHrmTest.orangHrmTest.AppTest">
         <methods>
-          <include name="addAdmin"/>
-          <include name="essLogin"/>
-          <include name="login"/>
-          <include name="adminLogin"/>
-          <include name="employeeSearch"/>
-          <include name="editFromAdmin"/>
-          <include name="leaveList"/>
-          <include name="editEmployee"/>
+          <include name="leaveFromAdmin"/>
+          <include name="leaveFromEmployee"/>
           <include name="mySetup"/>
-          <include name="addEss"/>
-          <include name="deleteEmployee"/>
           <include name="searchAdminRecords"/>
           <include name="deleteFromAdmin"/>
-          <include name="addEmployee"/>
         </methods>
       </class> <!-- orangHrmTest.orangHrmTest.AppTest -->
     </classes>

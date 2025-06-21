@@ -23,6 +23,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -250,8 +251,7 @@ public class AppTest extends testData {
 		WebElement employeeList = driver.findElement(By.cssSelector(".oxd-topbar-body-nav-tab.--visited"));
 		employeeList.click();
 
-		List<WebElement> allButton = driver
-				.findElements(By.cssSelector(".oxd-icon.bi-pencil-fill"));
+		List<WebElement> allButton = driver.findElements(By.cssSelector(".oxd-icon.bi-pencil-fill"));
 		List<WebElement> editButton = new ArrayList<>();
 		for (int i = 0; i < allButton.size(); i++) {
 
@@ -279,8 +279,7 @@ public class AppTest extends testData {
 		WebElement employeeList = driver.findElement(By.cssSelector(".oxd-topbar-body-nav-tab.--visited"));
 		employeeList.click();
 
-		List<WebElement> allButton = driver
-				.findElements(By.cssSelector(".oxd-icon.bi-trash"));
+		List<WebElement> allButton = driver.findElements(By.cssSelector(".oxd-icon.bi-trash"));
 		List<WebElement> deleteButton = new ArrayList<>();
 		for (int i = 1; i < allButton.size(); i++) {
 
@@ -390,8 +389,7 @@ public class AppTest extends testData {
 		WebElement confirmButton = driver.findElement(
 				By.cssSelector(".oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-button-margin"));
 		confirmButton.click();
-		
-		
+
 	}
 
 	@Test(priority = 13)
@@ -413,73 +411,11 @@ public class AppTest extends testData {
 		loginButton.click();
 
 	}
-	
-	@Test(priority = 14,enabled = false)
-	public void leaveFromEmployee() throws InterruptedException {    
-		WebElement moveToLeavePage=driver.findElement(By.linkText("Leave"));
-		moveToLeavePage.click();
-		
-		WebElement moveToApplyPage =driver.findElement(By.linkText("Apply"));
-		moveToApplyPage.click();
-	
-		WebElement leaveType =driver.findElement(By.className("oxd-select-text-input"));
-		leaveType.click();
-		leaveType.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER));
 
-		List<WebElement> allDate = driver.findElements(By.cssSelector(".oxd-input.oxd-input--active"));
-		WebElement firstDate= allDate.get(1);
-		firstDate.sendKeys(formatterToday);
-		
-		WebElement secondDate = allDate.get(2);
-		secondDate.click();		
-		secondDate.sendKeys(Keys.CONTROL , "a" , Keys.DELETE);
-		secondDate.sendKeys(formatterAfterTwoDay);
-		
-		
-		
-		WebElement partialDays = driver.findElement(By.xpath("(//div[@class='oxd-select-text-input'])[2]"));
+	@AfterTest
+	public void afterMyTest() {
 
-		partialDays.click();
+		driver.quit();
 
-		partialDays.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER));
-
-		Thread.sleep(2000);
-
-		WebElement duration = driver.findElement(By.cssSelector("(//div[@class='oxd-select-text-input'])[2]"));
-		duration.click();
-		duration.sendKeys(Keys.chord(Keys.ARROW_DOWN, Keys.ENTER));
-		
-		WebElement saveButton = driver.findElement(By.className("oxd-select-text-input"));
-		saveButton.click();
-		
 	}
-	
-
-	@Test(priority = 15,enabled = false)
-	public void leaveFromAdmin() throws InterruptedException {
-		WebElement toLogOut = driver.findElement(By.cssSelector(".oxd-userdropdown-tab"));
-		toLogOut.click();
-		
-		WebElement logOutButton = driver.findElement(By.linkText("Logout"));
-		logOutButton.click();
-		
-		login();
-		
-		WebElement moveToLeavePage=driver.findElement(By.linkText("Leave"));
-		moveToLeavePage.click();
-		
-		 
-		WebElement moveToLeavelist=driver.findElement(By.linkText("Leave List"));
-		moveToLeavelist.click();
-		
-		List<WebElement> approveButton = driver.findElements(By.cssSelector(".oxd-button.oxd-button--medium.oxd-button--label-success.oxd-table-cell-action-space"));
-		int randomApproveButton = rand.nextInt(approveButton.size());
-		approveButton.get(randomApproveButton).click();
-			
-		
-		
-		
-		
-	}
-
 }

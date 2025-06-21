@@ -1,68 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="15" passed="13" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-19T11:51:16 PDT" name="Default suite" finished-at="2025-06-19T11:52:26 PDT" duration-ms="70027">
+  <suite started-at="2025-06-20T18:43:12 PDT" name="Default suite" finished-at="2025-06-20T18:44:01 PDT" duration-ms="48647">
     <groups>
     </groups>
-    <test started-at="2025-06-19T11:51:16 PDT" name="Default test" finished-at="2025-06-19T11:52:26 PDT" duration-ms="70027">
+    <test started-at="2025-06-20T18:43:12 PDT" name="Default test" finished-at="2025-06-20T18:44:01 PDT" duration-ms="48647">
       <class name="orangHrmTest.orangHrmTest.AppTest">
-        <test-method is-config="true" signature="mySetup()[pri:0, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:51:16 PDT" name="mySetup" finished-at="2025-06-19T11:51:24 PDT" duration-ms="7398" status="PASS">
+        <test-method is-config="true" signature="mySetup()[pri:0, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:12 PDT" name="mySetup" finished-at="2025-06-20T18:43:14 PDT" duration-ms="1994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mySetup -->
-        <test-method signature="login()[pri:1, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:51:24 PDT" name="login" finished-at="2025-06-19T11:51:26 PDT" duration-ms="2179" status="PASS">
+        <test-method signature="login()[pri:1, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:14 PDT" name="login" finished-at="2025-06-20T18:43:15 PDT" duration-ms="371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="addAdmin()[pri:2, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:51:26 PDT" name="addAdmin" finished-at="2025-06-19T11:51:36 PDT" duration-ms="10045" status="PASS">
+        <test-method signature="addAdmin()[pri:2, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:15 PDT" name="addAdmin" finished-at="2025-06-20T18:43:22 PDT" duration-ms="7382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAdmin -->
-        <test-method signature="adminLogin()[pri:3, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:51:36 PDT" name="adminLogin" finished-at="2025-06-19T11:51:38 PDT" duration-ms="1869" status="PASS">
+        <test-method signature="adminLogin()[pri:3, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:22 PDT" name="adminLogin" finished-at="2025-06-20T18:43:23 PDT" duration-ms="1031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adminLogin -->
-        <test-method signature="editFromAdmin()[pri:4, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:51:38 PDT" name="editFromAdmin" finished-at="2025-06-19T11:51:44 PDT" duration-ms="5633" status="PASS">
+        <test-method signature="editFromAdmin()[pri:4, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:23 PDT" name="editFromAdmin" finished-at="2025-06-20T18:43:28 PDT" duration-ms="4620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editFromAdmin -->
-        <test-method signature="deleteFromAdmin()[pri:5, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:51:44 PDT" name="deleteFromAdmin" finished-at="2025-06-19T11:51:50 PDT" duration-ms="6061" status="PASS">
+        <test-method signature="deleteFromAdmin()[pri:5, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:28 PDT" name="deleteFromAdmin" finished-at="2025-06-20T18:43:33 PDT" duration-ms="5458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteFromAdmin -->
-        <test-method signature="searchAdminRecords()[pri:6, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:51:50 PDT" name="searchAdminRecords" finished-at="2025-06-19T11:51:51 PDT" duration-ms="1289" status="PASS">
+        <test-method signature="searchAdminRecords()[pri:6, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:33 PDT" name="searchAdminRecords" finished-at="2025-06-20T18:43:34 PDT" duration-ms="1069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchAdminRecords -->
-        <test-method signature="addEmployee()[pri:7, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:51:51 PDT" name="addEmployee" finished-at="2025-06-19T11:52:00 PDT" duration-ms="9322" status="PASS">
+        <test-method signature="addEmployee()[pri:7, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:34 PDT" name="addEmployee" finished-at="2025-06-20T18:43:43 PDT" duration-ms="8241" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmployee -->
-        <test-method signature="editEmployee()[pri:8, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:52:00 PDT" name="editEmployee" finished-at="2025-06-19T11:52:05 PDT" duration-ms="5080" status="PASS">
+        <test-method signature="editEmployee()[pri:8, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:43 PDT" name="editEmployee" finished-at="2025-06-20T18:43:47 PDT" duration-ms="4166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editEmployee -->
-        <test-method signature="deleteEmployee()[pri:9, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:52:05 PDT" name="deleteEmployee" finished-at="2025-06-19T11:52:08 PDT" duration-ms="2946" status="PASS">
+        <test-method signature="deleteEmployee()[pri:9, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:47 PDT" name="deleteEmployee" finished-at="2025-06-20T18:43:48 PDT" duration-ms="1345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteEmployee -->
-        <test-method signature="employeeSearch()[pri:10, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:52:08 PDT" name="employeeSearch" finished-at="2025-06-19T11:52:10 PDT" duration-ms="2147" status="PASS">
+        <test-method signature="employeeSearch()[pri:10, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:48 PDT" name="employeeSearch" finished-at="2025-06-20T18:43:50 PDT" duration-ms="1891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- employeeSearch -->
-        <test-method signature="addEss()[pri:11, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:52:10 PDT" name="addEss" finished-at="2025-06-19T11:52:17 PDT" duration-ms="6947" status="PASS">
+        <test-method signature="addEss()[pri:11, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:50 PDT" name="addEss" finished-at="2025-06-20T18:43:56 PDT" duration-ms="5707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEss -->
-        <test-method signature="leaveList()[pri:12, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:52:17 PDT" name="leaveList" finished-at="2025-06-19T11:52:24 PDT" duration-ms="6431" status="PASS">
+        <test-method signature="leaveList()[pri:12, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:43:56 PDT" name="leaveList" finished-at="2025-06-20T18:44:00 PDT" duration-ms="4261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- leaveList -->
-        <test-method signature="essLogin()[pri:13, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-19T11:52:24 PDT" name="essLogin" finished-at="2025-06-19T11:52:26 PDT" duration-ms="2528" status="PASS">
+        <test-method signature="essLogin()[pri:13, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:44:00 PDT" name="essLogin" finished-at="2025-06-20T18:44:01 PDT" duration-ms="990" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- essLogin -->
+        <test-method is-config="true" signature="afterMyTest()[pri:0, instance:orangHrmTest.orangHrmTest.AppTest@784c3487]" started-at="2025-06-20T18:44:01 PDT" name="afterMyTest" finished-at="2025-06-20T18:44:01 PDT" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMyTest -->
       </class> <!-- orangHrmTest.orangHrmTest.AppTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
